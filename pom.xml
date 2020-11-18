@@ -12,7 +12,7 @@
         <aspectj.version>1.9.5</aspectj.version>
         <allure.version>2.13.6</allure.version>
         <compiler.version>1.8</compiler.version>
-        <maven-plugin.version>3.2</maven-plugin.version>
+        <maven-plugin.version>3.6</maven-plugin.version>
     </properties>
 
     <profiles>
@@ -77,6 +77,18 @@
     <build>
 
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.shared</groupId>
+                        <artifactId>maven-filtering</artifactId>
+                        <version>1.3</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
