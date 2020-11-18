@@ -10,9 +10,6 @@ public class FilterTest {
     ProductListPageStep productListPageStep;
 
     String mainMenuName = "Смартфоны";
-    String menuName1 = "Samsung";
-    String minFilterPrice = "6000";
-    String maxFilterPrice = "15000";
     String menuName2 = "Xiaomi";
     String memoryFilterBlock = "Объем встроенной памяти";
     String memorySizeFilter1 = "32";
@@ -33,14 +30,6 @@ public class FilterTest {
         clearBrowserCookies();
         clearBrowserLocalStorage();
         refresh();
-    }
-
-    @Test
-    public void priceFilterTest() {
-        homePageStep.clickOnLinkInMenu(mainMenuName, menuName1);
-        productListPageStep.setPriceFilter(minFilterPrice, maxFilterPrice);
-        productListPageStep.verifyProductNamesByFilter(menuName1);
-        productListPageStep.verifyProductPricesByFilter(minFilterPrice, maxFilterPrice);
     }
 
     @Test
