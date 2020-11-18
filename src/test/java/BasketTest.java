@@ -41,7 +41,7 @@ public class BasketTest {
         productListPageStep.verifyBasketContent(productName, productPrice);
     }
 
-    @Test
+    @Test(dependsOnMethods = "addProductToBasketViaSearchResults")
     public void addProductToBasketViaMenu() {
         homePageStep.clickOnLinkInMenu(mainMenuName, menuName);
         productListPageStep.clickOnProduct(productName);
@@ -50,7 +50,7 @@ public class BasketTest {
         productPageStep.verifyBasketContent(productName, productPrice);
     }
 
-    @Test (dependsOnMethods = "addProductToBasketViaMenu")
+    @Test(dependsOnMethods = "addProductToBasketViaMenu")
     public void addTwoProductsToBasketViaSearchResults() {
         homePageStep.searchProduct(productTestName);
 
