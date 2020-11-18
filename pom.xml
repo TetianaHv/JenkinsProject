@@ -133,9 +133,9 @@
             </plugin>
         </plugins>
 
-<!--        <filters>-->
-<!--            <filter>src/main/resources/env/co nfig.${env}.properties</filter>-->
-<!--        </filters>-->
+        <filters>
+            <filter>src/main/resources/env/config.${env}.properties</filter>
+        </filters>
 
         <resources>
             <resource>
